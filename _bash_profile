@@ -1,0 +1,16 @@
+
+# bash setting
+alias ll="ls -l"
+alias lla="ls -la"
+
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoredups
+export HISTIGNORE=ls:ll:lla:pwd:history
+
+
+# git setting
+source ~/.git-completion.bash
+
+
+
