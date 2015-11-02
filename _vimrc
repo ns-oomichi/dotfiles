@@ -12,6 +12,7 @@ endif
 
 " Required
 call neobundle#begin(expand('~/.vim/bundle/'))
+"call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -39,12 +40,10 @@ NeoBundle 'ahawkins/vim-candy'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
 NeoBundle 'altercation/vim-colors-solarized'
 
+
 NeoBundle 'vim-jp/vim-go-extra'
+NeoBundle 'google/vim-ft-go'
 "NeoBundle 'faith/vim-go'
-
-
-" filetype addition
-NeoBundle 'derekwyatt/vim-scala'
 
 
 call neobundle#end()
@@ -58,14 +57,7 @@ filetype plugin indent on     " Required!
 NeoBundleCheck
 
 
-
-
-
-
-
-
 " -------------------------------
-
 
 
 set number
@@ -149,7 +141,7 @@ endif
 " 保存時に行末の空白を除去する
 autocmd BufWritePre * :%s/\s\+$//ge
 " 保存時にtabをスペースに変換する
-autocmd BufWritePre * :%s/\t/  /ge
+"autocmd BufWritePre * :%s/\t/  /ge
 
 noremap <Space>j <C-f>
 noremap <Space>k <C-b>
@@ -173,10 +165,5 @@ onoremap gc :<C-u>normal gc<Enter>
 syntax on
 filetype on
 au BufNewFile,BufRead *.psgi set filetype=perl
-
-
-" golang
-"autocmd FileType go autocmd BufWritePre <buffer> Fmt
-"au FileType go au BufWritePre <buffer> Fmt
 
 
